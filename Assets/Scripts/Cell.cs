@@ -8,7 +8,7 @@ public class Cell : MonoBehaviour
     {
         if (transform.Find("Uranium-235") == null)
         {
-            if (Random.Range(0, 1650) == 0)
+            if (Random.value < 0.1f * Time.deltaTime)
             {
                 GameObject newChild = Instantiate(uranium, transform);
                 newChild.name = "Uranium-235";
